@@ -1,0 +1,27 @@
+---
+//
+// Devhub Website
+// Components
+// Head Component injected into <head> of every page using MainLayout
+// 
+const { 
+  title = 'Devhub',
+  description = "Devhub Website",
+  image = new URL("assets/banner.png", Astro.site),
+  ...props 
+} = Astro.props;
+---
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta name="viewport" content="width=device-width" />
+<link rel="sitemap" href="/sitemap-index.xml">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Open Graph tags -->
+<meta property="og:title" content={title} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:description" content={description}/>
+<meta property="og:image" content={image}>
+
+
