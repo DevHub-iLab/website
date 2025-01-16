@@ -8,5 +8,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ntudevhub.org',
-  integrations: [react(), tailwind()],
+  integrations: [react(), tailwind({
+    applyBaseStyles: false,
+  })],
 })
