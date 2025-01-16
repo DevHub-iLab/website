@@ -6,9 +6,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "fmt": "standard --fix",
+    "lint": "astro check && standard",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.1.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "standard": "^17.1.2",
+    "typescript": "^5.7.3"
   }
 }
