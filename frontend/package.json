@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "fmt": "standard --fix",
     "lint": "astro check && standard",
+    "test": "vitest",
     "astro": "astro"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "standard": "^17.1.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vitest": "2.1.6"
   }
 }
