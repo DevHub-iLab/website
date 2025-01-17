@@ -10,6 +10,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+import { Button } from "@/components/ui/button"
 
 
 const ListItem = React.forwardRef<
@@ -36,6 +37,7 @@ const ListItem = React.forwardRef<
     </li>
   )
 })
+// TODO(mrzzy): extract out Navigation menu content into
 export default function Navigation() {
   return (
     <NavigationMenu>
@@ -51,6 +53,7 @@ export default function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem><NavigationMenuLink>About</NavigationMenuLink></NavigationMenuItem>
         <NavigationMenuItem>Contact</NavigationMenuItem>
+        <NavigationMenuItem><Button>Join Us</Button></NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
