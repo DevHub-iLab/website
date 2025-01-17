@@ -30,9 +30,11 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "astro": "^5.1.7",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
     "shadcn": "^2.1.8",
     "typescript": "^5.7.3",
-    "vitest": "2.1.6",
-    "astro": "^5.1.7"
+    "vitest": "2.1.6"
   }
 }
