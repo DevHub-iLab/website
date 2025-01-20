@@ -3,18 +3,17 @@ import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { LucideDumbbell, LucideHardHat, LucideScale } from "lucide-react";
+import Logo from "./Logo";
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
+  React.ComponentRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & { icon: React.ReactNode }
 >(({ className, title, children, ...props }, ref) => {
   return (
@@ -28,7 +27,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-[--highlight]">
+          <div className="text-[--yellow]">
             <span className="inline-block px-2">{props.icon}</span>
             <span className="leading-none text-lg font-medium">{title}</span>
           </div>
@@ -46,6 +45,10 @@ export default function NavigationBar() {
   return (
     <NavigationMenu>
       <NavigationMenuList className="text-sm">
+        <NavigationMenuItem>
+          <Logo />
+        </NavigationMenuItem>
+
         <NavigationMenuItem>
           <NavigationMenuTrigger>Events</NavigationMenuTrigger>
           <NavigationMenuContent>
