@@ -6,6 +6,8 @@
 //
 
 import "../styles/globals.css";
+import "@fontsource-variable/raleway";
+import "@fontsource-variable/open-sans";
 
 const {
   title = "Devhub",
@@ -30,7 +32,7 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
   </head>
-  <body class="dark bg-[--background] text-[--foreground]">
+  <body class="font-sans dark bg-[--background] text-[--foreground]">
     <main>
       <slot />
     </main>

@@ -2,7 +2,7 @@
  * Devhub Website
  * Components
  * Navigation Menu
-*/
+ */
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
@@ -16,7 +16,12 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import { LucideDumbbell, LucideHardHat, LucideMenu, LucideScale } from "lucide-react";
+import {
+  LucideDumbbell,
+  LucideHardHat,
+  LucideMenu,
+  LucideScale,
+} from "lucide-react";
 import Logo from "./logo/Logo";
 
 const ListItem = React.forwardRef<
@@ -24,7 +29,7 @@ const ListItem = React.forwardRef<
   React.ComponentPropsWithoutRef<"a"> & { icon: React.ReactNode }
 >(({ className, title, children, ...props }, ref) => {
   return (
-    <li>
+    <li className="py-2">
       <NavigationMenuLink asChild>
         <a
           ref={ref}
@@ -36,7 +41,7 @@ const ListItem = React.forwardRef<
         >
           <div className="text-[--yellow]">
             <span className="inline-block px-2">{props.icon}</span>
-            <span className="leading-none text-lg font-medium">{title}</span>
+            <span className="leading-none text-lg font-semibold">{title}</span>
           </div>
           <p className="pl-2 line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
@@ -48,22 +53,24 @@ const ListItem = React.forwardRef<
 });
 
 export default function Navigation() {
-  const iconSize = 15;
-  const itemStyle = "py-4 md:px-8";
-
-
   const [isCollapsed, setCollapsed] = React.useState(true);
-  
+
+  const iconSize = 16;
+  const itemStyle = "py-4 md:px-8";
   return (
     <nav className="p-4 flex flex-row justify-between">
-      <Logo className={itemStyle}/>
-    
-      
+      <Logo className={itemStyle} />
+
       <div className="flex flex-col items-end">
         {/* Hamburger Toggle for Navigation Menu for mobile devices */}
-        <LucideMenu className={`m-5 block md:hidden`} onClick={() => setCollapsed(!isCollapsed)} />
+        <LucideMenu
+          className={`m-5 block md:hidden`}
+          onClick={() => setCollapsed(!isCollapsed)}
+        />
 
-        <NavigationMenu className={`${isCollapsed ? "hidden": "inline-block"} md:inline-block`}>
+        <NavigationMenu
+          className={`${isCollapsed ? "hidden" : "inline-block"} md:inline-block`}
+        >
           <NavigationMenuList className="text-sm flex-col md:flex-row">
             <NavigationMenuItem className={cn("screen md:w-auto", itemStyle)}>
               <NavigationMenuTrigger className="w-full">
