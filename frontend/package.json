@@ -6,8 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "fmt": "standard --fix",
-    "lint": "astro check && standard",
+    "fmt": "prettier --write .",
+    "lint": "astro check && prettier --check .",
     "test": "vitest",
     "astro": "astro"
   },
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/ts-plugin": "^1.10.4",
     "astro": "^5.1.7",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
