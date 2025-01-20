@@ -14,7 +14,6 @@ const {
   ...props
 } = Astro.props;
 ---
-
 <html lang="en">
   <head>
     <title>{title}</title>
@@ -30,7 +29,7 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
   </head>
-  <body>
+  <body class="dark bg-[--background] text-[--foreground]">
     <main>
       <slot />
     </main>
