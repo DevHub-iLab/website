@@ -34,14 +34,14 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --yellow: #EB7407;
-    --red: #D03324;
+    --yellow: #eb7407;
+    --red: #d03324;
   }
 
   .dark {
-    --background: #19171C;
+    --background: #19171c;
     --muted-background: #252328;
-    --foreground: #FFFFFF;
+    --foreground: #ffffff;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
