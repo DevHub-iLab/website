@@ -15,7 +15,6 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
 import {
   LucideDumbbell,
   LucideHardHat,
@@ -23,6 +22,8 @@ import {
   LucideScale,
 } from "lucide-react";
 import Logo from "./logo/Logo";
+import { buttonVariants } from "@/components/ui/button"
+import {Route} from "@/pages/routes";
 
 const ListItem = React.forwardRef<
   React.ComponentRef<"a">,
@@ -59,7 +60,9 @@ export default function Navigation() {
   const itemStyle = "py-4 md:px-8";
   return (
     <nav className="p-4 flex flex-row justify-between">
-      <Logo className={itemStyle} />
+      <a href={Route.Home}>
+        <Logo className={itemStyle} />
+      </a>
 
       <div className="flex flex-col items-end">
         {/* Hamburger Toggle for Navigation Menu for mobile devices */}
@@ -80,6 +83,7 @@ export default function Navigation() {
                 <ListItem
                   title="CodingPrep"
                   icon=<LucideDumbbell size={iconSize} />
+                  href={Route.CodingPrep}
                 >
                   Weekly meet where we practice solving and explaining LeetCode
                   Problems
@@ -87,12 +91,14 @@ export default function Navigation() {
                 <ListItem
                   title="Mock Interviews"
                   icon=<LucideScale size={iconSize} />
+                  href={Route.MockInterview}
                 >
                   Stave off the interview pressure with our mock interviews.
                 </ListItem>
                 <ListItem
-                  title="Summer Build "
+                  title="Summer Build"
                   icon=<LucideHardHat size={iconSize} />
+                  href={Route.SummerBuild}
                 >
                   A safe space to build, experiment and learn.
                 </ListItem>
@@ -101,15 +107,15 @@ export default function Navigation() {
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>
-              <NavigationMenuLink className="p-4">Contact</NavigationMenuLink>
+              <NavigationMenuLink className="p-4"><a href={Route.Contact}> Contact</a></NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>
-              <Button>Join Us</Button>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
-    </nav>
+              <a className={buttonVariants({ variant: "default" })} href={Route.SignUp}> Join Us</a>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
+    </nav >
   );
 }
