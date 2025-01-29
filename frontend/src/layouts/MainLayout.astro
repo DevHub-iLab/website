@@ -8,6 +8,8 @@
 import "../styles/globals.css";
 import "@fontsource-variable/raleway";
 import "@fontsource-variable/open-sans";
+import Navigation from "@/components/nav/Navigation";
+import Footer from "@/components/nav/Footer.astro";
 
 const {
   title = "Devhub",
@@ -33,8 +35,10 @@ const {
     <meta property="og:image" content={image} />
   </head>
   <body class="font-sans dark bg-[--background] text-[--foreground]">
+    <Navigation client:load />
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

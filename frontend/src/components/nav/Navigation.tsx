@@ -107,7 +107,7 @@ export default function Navigation() {
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>
-              <NavigationMenuLink className="p-4"><a href={Route.Contact}> Contact</a></NavigationMenuLink>
+              <NavigationMenuLink className="p-4"><a href={Route.Contact}>Contact</a></NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>

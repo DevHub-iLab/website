@@ -1,0 +1,63 @@
+---
+//
+// Devhub Website
+// Components
+// Footer
+//
+
+import { LucideInstagram, LucideLinkedin, LucideSend } from "lucide-react";
+import Logo from "./logo/Logo";
+import { Route } from "@/pages/routes";
+
+const sitemap = {
+  Events: {
+    CodingPrep: Route.CodingPrep,
+    "Summer Build": Route.SummerBuild,
+    "Mock Interview": Route.MockInterview,
+  },
+  "About Us": {
+    Vision: Route.Vision,
+    Initiatives: Route.Events,
+    "CCDS Innovation Lab": Route.ILab,
+  },
+  "Contact Us": {
+    "Work with Us": Route.Collaborate,
+    "Contact Info": Route.ContactInfo,
+  },
+  "Join Us": {
+    "Join Devhub": Route.Telegram,
+    "Join Main Committee": Route.SignUpMainComm,
+    "Join Sub Committee": Route.SignUpSubComm,
+  },
+};
+
+// style of lucide icons
+const iconStyle = "text-[--yellow] col-span-1";
+---
+
+<footer
+  class="grid gap-4 lg:grid-cols-[repeat(5,16em)] text-center justify-center py-24 bg-[--muted-background]"
+>
+  <div class="grid grid-cols-2 grid-rows-2 justify-items-center gap-4">
+    <a class="col-span-2" href={Route.Home}> <Logo /> </a>
+    <a href={Route.Instagram}><LucideInstagram className={iconStyle} /></a>
+    <a href={Route.Telegram}><LucideSend className={iconStyle} /></a>
+  </div>
+
+  {
+    Object.entries(sitemap).map(([header, contents]) => (
+      <div class="opacity-70 ">
+        <h2 class="font-bold mb-2">{header}</h2>
+        <ul class="text-sm">
+          {Object.entries(contents).map(([title, link]) => (
+            <li class="my-2">
+              <a class="hover:underline" href={link}>
+                {title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</footer>
