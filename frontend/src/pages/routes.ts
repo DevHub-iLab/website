@@ -6,13 +6,22 @@
 
 export enum Route {
   Home = "/",
+  Instagram = "ntu.devhub",
+  Linkedin = "",
 
-  Events = "/events",
-  CodingPrep = "/events#coding-prep",
-  MockInterview = "/events#mock-interview",
-  SummerBuild = "/events#summer-build",
+  Events = "/#events",
+  CodingPrep = "/#coding-prep",
+  MockInterview = "/#mock-interview",
+  SummerBuild = "/#summer-build",
 
-  Contact = "contact",
+  About = "/",
+  ILab = "https://www.linkedin.com/company/ntu-innovation-lab/",
+  Vision = "/#vision",
 
-  SignUp = "https://forms.office.com/r/JQm9nUgx8s",
+
+  Contact = "/contact",
+  Collaborate = "/contact#collaborate",
+  ContactInfo = "/contact#contact-info",
+
+  SignUp = "https://linktr.ee/devhub.ilab",
 }
