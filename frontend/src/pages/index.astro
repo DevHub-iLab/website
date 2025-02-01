@@ -8,12 +8,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 import groupPhoto from "./group_photo.jpg";
 import { Route } from "./routes";
+import Statistics from "@/components/index/Statistics";
 ---
 
 <MainLayout>
   <section
     id="introduction"
-    class="grid grid-cols-1 md:grid-cols-3 px-[4vw] gap-16 items-center"
+    class="grid grid-cols-1 md:grid-cols-3 px-[4vw] py-16 gap-16 items-center"
   >
     <div
       class="col-span-1 md:col-span-2 bg-[--yellow] translate-x-[6vmin] translate-y-[6vmin] mb-[6vmin] mr-[6vmin]"
@@ -21,7 +22,7 @@ import { Route } from "./routes";
       <Image
         src={groupPhoto}
         alt="Devhub Group Photo"
-        class="-translate-x-[6vmin] -translate-y-[6vmin]"
+        class="object-contain -translate-x-[6vmin] -translate-y-[6vmin]"
       />
     </div>
     <div class="col-span-1">
@@ -29,18 +30,21 @@ import { Route } from "./routes";
         We are<br />
         <span class="font-bold text-[--yellow]">
           DEV <br />
-          HUB</span
-        ><span class="font-bold text-[--red]">_</span>
+          HUB
+        </span><span class="font-bold text-[--red]">_</span>
       </h1>
       <p class="opacity-80">
-        part of <a class="hover:underline" href={Route.ILab}
-          >CCDS Innovation Lab</a>
+         part of 
+         <a class="hover:underline" href={Route.ILab} >CCDS Innovation Lab</a >
       </p>
-      <p class="mt-8">
         We are a student club dedicated to empowering students to excel in their
         careers and secure technical roles in the ever-evolving world of
         computing and technology.
       </p>
     </div>
+  </section>
+
+  <section id="statistics">
+    <Statistics client:visible />
   </section>
 </MainLayout>
