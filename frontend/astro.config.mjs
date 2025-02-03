@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ntudevhub.org",
+  site: "https://devhub-ilab.github.io",
   integrations: [
     react(),
     tailwind({
