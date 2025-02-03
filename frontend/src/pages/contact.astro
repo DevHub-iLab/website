@@ -1,0 +1,67 @@
+---
+//
+// Devhub Website
+// Homepage
+//
+
+import MainLayout from "@/layouts/MainLayout.astro";
+import MainAsideLayout from "@/layouts/MainAsideLayout.astro";
+import ContactCard from "@/components/contact/ContactCard.astro";
+import H1 from "@/components/style/H1.astro";
+import contactGraphic from "@/assets/contact_graphic.png";
+import { Image } from "astro:assets";
+import { Route } from "./routes";
+import { Button } from "@/components/ui/button";
+import { LucideInstagram, LucideMail, LucideSend } from "lucide-react";
+
+const iconStyle = "text-[--red]";
+const iconSize = 48;
+const email = "devhubilab@e.ntu.edu.sg";
+---
+
+<MainLayout>
+  <MainAsideLayout className="my-16" aside="right">
+    <div id="contact-info">
+      <H1 class="my-8 text-8xl"> Contact Us </H1>
+      <div class="grid grid-cols-1 sm:grid-cols-3 grid-rows-2 gap-6">
+        <ContactCard
+          className="col-span-2 row-span-1"
+          title="Join Us"
+          writeup="Join DevHub by completing the registration form."
+        >
+          <a href={Route.SignUp}><Button>Register</Button></a>
+        </ContactCard>
+        <ContactCard
+          className="col-span-1 row-span-2 flex flex-col justify-center gap-4"
+          title="Follow Us"
+          writeup="Follow out social media for the latest happenings!"
+        >
+          <div class="flex flex-col items-center gap-4">
+            <a href={Route.Instagram}
+              ><LucideInstagram size={iconSize} className={iconStyle} /></a
+            >
+            <a href={Route.Telegram}
+              ><LucideSend size={iconSize} className={iconStyle} /></a
+            >
+          </div>
+        </ContactCard>
+        <ContactCard
+          id="collaborate"
+          className="col-span-2 row-span-1"
+          title="Work With Us"
+          writeup="Drop us an email to collaborate!"
+        >
+          <a href={`mailto:${email}`}>
+            <Button><LucideMail /> {email}</Button>
+          </a>
+        </ContactCard>
+      </div>
+    </div>
+    <Image
+      slot="aside"
+      src={contactGraphic}
+      alt="Contact Us Graphic"
+      class="object-contain"
+    />
+  </MainAsideLayout>
+</MainLayout>

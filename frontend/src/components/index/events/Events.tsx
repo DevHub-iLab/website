@@ -50,7 +50,6 @@ const events = [
   },
 ]
 
-
 export default function Events() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-16 my-8">

@@ -6,8 +6,7 @@
 
 export enum Route {
   Home = "/",
-  Instagram = "ntu.devhub",
-  Linkedin = "",
+  Instagram = "https://instagram.com/ntu.devhub",
   Telegram = "https://forms.office.com/r/JQm9nUgx8s",
 
   Events = "/#events",

@@ -1,0 +1,28 @@
+---
+//
+// Devhub Website
+// Components
+// Contact Card
+//
+
+interface Props {
+  title: string;
+  writeup: string;
+  className: string;
+  children?: React.ReactElement;
+  id?: string;
+}
+
+const { title, writeup, className, ...props } = Astro.props;
+---
+
+<div
+  class:list={["rounded-xl p-6 bg-[--muted-background]", className]}
+  {...props}
+>
+  <div>
+    <h3 class="font-bold font-display text-4xl">{title}</h3>
+    <p class="opacity-80 my-4">{writeup}</p>
+  </div>
+  <slot />
+</div>

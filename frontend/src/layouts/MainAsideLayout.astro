@@ -8,16 +8,17 @@
 interface Props {
   // whether to position the aside element on the left or right of the main element
   aside: "left" | "right";
+  className: string;
 }
 
-const { aside } = Astro.props;
+const { aside, className } = Astro.props;
 // main element occupies 2/3 columns
 const mainStyle = "col-span-1 md:col-span-2";
 // aside element occuplies 1/3 column
 const asideStyle= "col-span-1";
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-16 items-center">
+<div class:list={["grid grid-cols-1 md:grid-cols-3 gap-16 items-center", className]}>
   {
   aside === "left" ? (
   <div class={asideStyle}>
