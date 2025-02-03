@@ -107,11 +107,11 @@ export default function Navigation() {
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>
-              <NavigationMenuLink className="p-4"><a href={Route.Contact}>Contact</a></NavigationMenuLink>
+              <NavigationMenuLink className="p-4" href={Route.Contact}>Contact</NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>
-              <a className={buttonVariants({ variant: "default" })} href={Route.SignUp}> Join Us</a>
+              <NavigationMenuLink className={buttonVariants({ variant: "default" })} href={Route.SignUp}> Join Us</NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
