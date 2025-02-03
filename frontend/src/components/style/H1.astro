@@ -1,0 +1,22 @@
+---
+//
+// Devhub Website
+// Style Components
+// H1 Header with Devhub Yellow and Red underscore style
+//
+
+import { cn } from "@/lib/utils";
+
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<h1 class={cn("font-display font-bold", className)}>
+  <span class="text-[--yellow]">
+    <slot />
+  </span>
+  <span class="text-[--red]">_</span>
+</h1>

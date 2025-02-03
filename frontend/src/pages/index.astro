@@ -4,17 +4,21 @@
 // Homepage
 //
 import { Image } from "astro:assets";
-import MainLayout from "../layouts/MainLayout.astro";
-import ThreeColumnLayout from "../layouts/ThreeColumnLayout.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import MainAsideLayout from "@/layouts/MainAsideLayout.astro";
 
-import groupPhoto from "./group_photo.jpg";
 import { Route } from "./routes";
 import Statistics from "@/components/index/Statistics";
+import H1 from "@/components/style/H1.astro";
+
+import groupPhoto from "./group_photo.jpg";
+import visionGraphic from "./vision_graphic.png";
 ---
 
 <MainLayout>
   <section id="introduction">
-    <ThreeColumnLayout aside="right">
+    <MainAsideLayout aside="right">
+      <!-- Overlapped yellow rectangle at the back of photo -->
       <div
         class="bg-[--yellow] translate-x-[6vmin] translate-y-[6vmin] mb-[6vmin] mr-[6vmin]"
       >
@@ -25,29 +29,47 @@ import Statistics from "@/components/index/Statistics";
         />
       </div>
       <div slot="aside">
-        <h1 class="font-display text-8xl mb-8">
-          We are<br />
-          <span class="font-bold text-[--yellow]">
-            DEV <br />
+        <h1 class="font-display text-6xl">
+          We are
+          <H1 className="my-8 text-8xl">
+            DEV<br />
             HUB
-          </span><span class="font-bold text-[--red]">_</span>
+          </H1>
         </h1>
-        <p class="opacity-80">
+        <p class="opacity-60 my-2">
           part of
           <a class="hover:underline" href={Route.ILab}>CCDS Innovation Lab</a>
         </p>
+        <p>
         We are a student club dedicated to empowering students to excel in their
         careers and secure technical roles in the ever-evolving world of computing
         and technology.
+        </p>
       </div>
-    </ThreeColumnLayout>
+    </MainAsideLayout>
   </section>
 
   <section id="statistics">
     <Statistics client:visible />
   </section>
 
-  <section id="vision"></section>
+  <section id="vision">
+    <MainAsideLayout aside="left">
+      <div slot="aside">
+        <H1 className="my-8 text-6xl max-w-xs"> Bridging the Gap </H1>
+        <p>
+          We&apos;re a group of students passionate about  bridging the gap between theory and practice in CCDS through events and workshops that prepare you for technical roles.
+        </p>
+      </div>
+      <Image
+        src={visionGraphic}
+        alt="Bridging the Gap Graphic"
+        class="object-contain"
+        />
+    </MainAsideLayout>
+  </section>
 
-  <section id="events"></section>
+  <section id="events">
+    
+  </section>
 </MainLayout>
