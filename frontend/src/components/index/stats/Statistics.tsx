@@ -11,25 +11,24 @@ export default function Statistics() {
   const stats = [
     {
       title: "Members",
-      icon: <LucideUser className="inline-block" />,
+      icon: <LucideUser />,
       value: 165,
     },
     {
       title: "Events",
-      icon: <LucideCalendar className="inline-block" />,
+      icon: <LucideCalendar />,
       value: 3,
     },
     {
       title: "Club",
-      icon: <LucideHeartHandshake className="inline-block" />,
+      icon: <LucideHeartHandshake />,
       value: 1,
     },
   ].map(props => <Statistic key={props.title} {...props} />);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center max-w-4xl m-auto gap-8 py-16">
+    <div className="grid grid-cols-1 sm:grid-cols-3 justify-items-center max-w-4xl m-auto gap-8 py-16">
       {stats}
     </div>
-
-  )
+  );
 }

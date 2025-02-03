@@ -8,11 +8,12 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import MainAsideLayout from "@/layouts/MainAsideLayout.astro";
 
 import { Route } from "./routes";
-import Statistics from "@/components/index/Statistics";
+import Statistics from "@/components/index/stats/Statistics";
+import Events from "@/components/index/events/Events";
 import H1 from "@/components/style/H1.astro";
 
-import groupPhoto from "./group_photo.jpg";
-import visionGraphic from "./vision_graphic.png";
+import groupPhoto from "@/assets//group_photo.jpg";
+import visionGraphic from "@/assets/vision_graphic.png";
 ---
 
 <MainLayout>
@@ -31,7 +32,7 @@ import visionGraphic from "./vision_graphic.png";
       <div slot="aside">
         <h1 class="font-display text-6xl">
           We are
-          <H1 className="my-8 text-8xl">
+          <H1 class="my-8 text-8xl">
             DEV<br />
             HUB
           </H1>
@@ -56,7 +57,7 @@ import visionGraphic from "./vision_graphic.png";
   <section id="vision">
     <MainAsideLayout aside="left">
       <div slot="aside">
-        <H1 className="my-8 text-6xl max-w-xs"> Bridging the Gap </H1>
+        <H1 class="my-8 text-6xl max-w-xs"> Bridging the Gap </H1>
         <p>
           We&apos;re a group of students passionate about  bridging the gap between theory and practice in CCDS through events and workshops that prepare you for technical roles.
         </p>
@@ -70,6 +71,6 @@ import visionGraphic from "./vision_graphic.png";
   </section>
 
   <section id="events">
-    
+    <Events />
   </section>
 </MainLayout>

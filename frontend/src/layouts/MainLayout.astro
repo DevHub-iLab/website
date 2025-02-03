@@ -15,7 +15,7 @@ const {
   title = "Devhub",
   description = "Devhub Website",
   image = new URL("assets/banner.png", Astro.site),
-  ...props
+  className = "",
 } = Astro.props;
 ---
 
@@ -36,7 +36,7 @@ const {
   </head>
   <body class="font-sans dark bg-[--background] text-[--foreground]">
     <Navigation client:load />
-    <main>
+    <main class:list={[className, "px-[4vw]"]}>
       <slot />
     </main>
     <Footer />
