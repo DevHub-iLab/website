@@ -12,12 +12,12 @@ export default function Statistics() {
     {
       title: "Members",
       icon: <LucideUser />,
-      value: 165,
+      value: 227,
     },
     {
       title: "Events",
       icon: <LucideCalendar />,
-      value: 3,
+      value: 4,
     },
     {
       title: "Club",
