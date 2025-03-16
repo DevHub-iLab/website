@@ -5,7 +5,7 @@
 //
 
 import codingPrepImg from "@/assets/coding_prep.png";
-import summerBuildImg from "@/assets/summer_build.png";
+import summerBuildImg from "@/assets/summer_build_25.png";
 import mockInterviewImg from "@/assets/mock_interviews.png";
 import { LucideDumbbell, LucideHardHat, LucideScale } from "lucide-react";
 import { Route } from "@/pages/routes";
@@ -40,16 +40,16 @@ const events = [
   },
   {
     id: "summer-build",
-    title: "Summer Build",
+    title: "SummerBuild",
     imgSrc: summerBuildImg,
-    imgAlt: "Summer Build Session",
+    imgAlt: "SummerBuild Session",
     icon: <LucideHardHat />,
-    timing: "TBC",
+    timing: "May - June 2025",
     writeup:
-      "Eager to start learning software development? SummerBuild is a self-directed program where you and your team take charge of creating your own software projects. It's a hands-on, collaborative experience designed to help you develop your skills, learn at your own pace, and build something amazing-all in a fun, pressure-free environment.",
+      "Eager to start learning software development? SummerBuild is a 5-week programme where you and your team take charge of creating your own software projects. It's a hands-on, collaborative experience designed to help you develop your skills, learn at your own pace, and build something amazing-all in a fun, pressure-free environment.",
     // Call To Action (CTA) button
     ctaTitle: "Sign Up",
-    ctaHref: Route.SignUp,
+    ctaHref: "https://build.ilabccds.com",
   },
 ];
 
