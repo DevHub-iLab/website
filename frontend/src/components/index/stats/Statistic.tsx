@@ -1,23 +1,30 @@
 //
-// Devhub Website
+// DevHub Website
 // UI Components
 // Statistic
 //
 
 import * as React from "react";
-import { useCountUp } from 'react-countup'
+import { useCountUp } from "react-countup";
 
 interface StatisticProps {
-  title: string,
-  icon: React.ReactElement,
-  value: number,
-  duration?: number
+  title: string;
+  icon: React.ReactElement;
+  value: number;
+  duration?: number;
 }
 
 /** Display a statistic by animating a counting up counter over duration */
-export default function Statistic({ title, icon, value, duration = 1.2 }: StatisticProps) {
+export default function Statistic({
+  title,
+  icon,
+  value,
+  duration = 1.2,
+}: StatisticProps) {
   // setup count up element to display count up animation
-  const ref = React.useRef<HTMLParagraphElement>(null) as React.RefObject<HTMLParagraphElement>;
+  const ref = React.useRef<HTMLParagraphElement>(
+    null,
+  ) as React.RefObject<HTMLParagraphElement>;
   useCountUp({
     ref,
     duration,

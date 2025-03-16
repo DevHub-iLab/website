@@ -9,7 +9,11 @@ export default function Logo({ className = "" }) {
         className,
       )}
     >
-      <img className="h-8 inline-block mr-2" src={logoSVG.src} alt="Devhub Pengi" />
+      <img
+        className="h-8 inline-block mr-2"
+        src={logoSVG.src}
+        alt="DevHub Pengi"
+      />
       <span className="inline-block font-bold text-[--yellow]">DEVHUB</span>
       <span className="inline-block text-[--red]">_</span>
     </div>

@@ -1,8 +1,8 @@
 /*
- * Devhub Website
+ * DevHub Website
  * Pages
  * Route Constants
-*/
+ */
 
 export enum Route {
   Home = "/",
@@ -17,7 +17,6 @@ export enum Route {
   About = "/",
   ILab = "https://www.linkedin.com/company/ntu-innovation-lab/",
   Vision = "/#vision",
-
 
   Contact = "/contact",
   Collaborate = "/contact#collaborate",

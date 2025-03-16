@@ -1,5 +1,5 @@
 /*
- * Devhub Website
+ * DevHub Website
  * Components
  * Navigation Menu
  */
@@ -22,8 +22,8 @@ import {
   LucideScale,
 } from "lucide-react";
 import Logo from "./logo/Logo";
-import { buttonVariants } from "@/components/ui/button"
-import {Route} from "@/pages/routes";
+import { buttonVariants } from "@/components/ui/button";
+import { Route } from "@/pages/routes";
 
 const ListItem = React.forwardRef<
   React.ComponentRef<"a">,
@@ -107,15 +107,23 @@ export default function Navigation() {
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>
-              <NavigationMenuLink className="p-4" href={Route.Contact}>Contact</NavigationMenuLink>
+              <NavigationMenuLink className="p-4" href={Route.Contact}>
+                Contact
+              </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem className={itemStyle}>
-              <NavigationMenuLink className={buttonVariants({ variant: "default" })} href={Route.SignUp}> Join Us</NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
-    </nav >
+              <NavigationMenuLink
+                className={buttonVariants({ variant: "default" })}
+                href={Route.SignUp}
+              >
+                {" "}
+                Join Us
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+    </nav>
   );
 }

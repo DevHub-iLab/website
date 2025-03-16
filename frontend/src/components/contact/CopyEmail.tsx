@@ -1,6 +1,6 @@
-"use client"
+"use client";
 //
-// Devhub Website
+// DevHub Website
 // Components
 // Copy Email Button
 //
@@ -8,9 +8,11 @@
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "../ui/button";
 
-
 /** Copies email to the user's clipboard, showing toast as visual indication */
-export default function CopyEmail({ email, children }: React.PropsWithChildren<{ email: string }>) {
+export default function CopyEmail({
+  email,
+  children,
+}: React.PropsWithChildren<{ email: string }>) {
   const { toast } = useToast();
   return (
     <Button
@@ -19,7 +21,7 @@ export default function CopyEmail({ email, children }: React.PropsWithChildren<{
         navigator.clipboard.writeText(email);
         toast({
           description: "Copied Email to clipboard.",
-        })
+        });
       }}
     >
       {children}
